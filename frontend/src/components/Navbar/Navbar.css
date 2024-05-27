@@ -1,0 +1,124 @@
+.navbar {
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #ebf2ee;
+
+  /* background: url("../../../public/zomato_navbar.avif"); */
+
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+}
+
+.navbar .logo {
+  width: 150px;
+  animation: fadeIn 3s;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  color: #49557e;
+  font-size: 18px;
+
+  align-items: center;
+}
+
+.navbar li {
+  cursor: pointer;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar button {
+  background-color: transparent;
+  font-size: 16px;
+  color: #49557e;
+  border: 1px solid tomato;
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+
+  &:hover {
+    background-color: #fff4f2;
+  }
+}
+
+.navbar-menu Link,
+.navbar-menu a {
+  padding: 8px 20px;
+}
+
+.navbar .active {
+  /* padding-bottom: 2px; */
+  /* border-bottom: 2px solid #49557e; */
+  /* color: #49557e; */
+
+  color: white;
+  border-radius: 50px;
+  background-color: #6395cb;
+  transition: 0.5s ease-in-out;
+}
+
+.navbar-search-icon {
+  position: relative;
+
+  .dot {
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+  }
+}
+
+.navbar-profile {
+  position: relative;
+}
+
+.navbar-profile:hover .nav-profile-dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fff2ef;
+  padding: 12px 25px;
+  border-radius: 4px;
+  border: 1px solid tomato;
+  outline: 2px solid white;
+  list-style: none;
+}
+
+.nav-profile-dropdown {
+  position: absolute;
+  display: none;
+  right: 0;
+  z-index: 1;
+}
+
+.nav-profile-dropdown li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.nav-profile-dropdown li:hover {
+  color: blue;
+}
+
+.nav-profile-dropdown img {
+  width: 20px;
+}

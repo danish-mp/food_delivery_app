@@ -1,0 +1,28 @@
+.robot-container {
+  display: flex;
+  min-width: 82%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.robot-container img {
+  width: 400px;
+}
+
+.robot-container h1 {
+  font-weight: 500;
+  color: rgb(125, 122, 118);
+}
+
+.robot-container h1 span {
+  color: cornflowerblue;
+}
+
+@media (max-width: 900px) {
+  .robot-container img {
+    width: 250px;
+  }
+  .robot-container h1 {
+    font-weight: 300;
+  }
+}
