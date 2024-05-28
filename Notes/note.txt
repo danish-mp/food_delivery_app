@@ -1,0 +1,82 @@
+
+
+Frontend:-
+
+1. `npm i react-router-dom`
+2. `npm i axios`
+3. `npm i react-toastify`
+4. 
+5. 
+
+
+`https://fonts.google.com/`    <= font = outfit
+
+
+Backend:-
+
+1. `npm init -y`
+2. `npm i nodemon -D`
+3. `npm i express mongoose cors jsonwebtoken bcrypt dotenv body-parser multer stripe validator`
+4. 
+5. 
+ 
+
+Stripe key:-
+
+`https://stripe.com/in` => create account => 
+copy & paste Secret key => `sk_test_51PJJMiSEE1DMO4uLONXv7yWqwABQj3W6BVN2saUuAnyyi86u0o9wf7xoJafu5G5AplRRryTqYQNp46SstsqW7RHT007vFeMD36`
+
+
+Stripe dummy card number :-
+
+`https://docs.stripe.com/testing` => click `Cards by country` => `4000003560000008`
+
+
+
+Admin:-
+
+1. `npm i axios react-toastify react-router-dom`
+2. 
+3. 
+ 
+
+
+Go to `package.json` =>
+                        "type": "module",
+
+                        "scripts": {
+                            "server": "nodemon src/index.js"
+                        },
+
+                        `npm run server`
+
+
+
+MongoDb Atlas =>
+                Create Organization => Name Your Organization => click `Create Organization` button => click `new project`
+                => Name Your Project => click `next` => click `Create Project` => click `Database` => click `Build a Cluster`
+                => M0 free server => click `Preload sample dataset` => click `create deployment` button => create new `username`
+                and `password` and copy => click `Create Database User` button => click `choose a connection method` => 
+                Connect to your application => driver => Driver (mongoose) & Version => copy the first line
+                                            (`mongodb+srv://food_delivery_app:56943297816495213@cluster0.oflfi81.mongodb.net/?`)
+                => network access => click `ADD IP ADDRESS` => 
+                                                        Access List Entry: 0.0.0.0 => click `confirm` => delete 2nd IP address
+                => 
+
+
+
+mongodb+srv://food_delivery_app:56943297816495213@cluster0.oflfi81.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+Backend deploy link:-  `https://food-delivery-app-o0u1.onrender.com`
+
+Frontend deploy link:- `https://zomatofooddelivery-kf54ob2mx-danishs-projects-f407c8aa.vercel.app`
+
+Admin deploy link:- `https://admin-food-delivery-eriiu1zqf-danishs-projects-f407c8aa.vercel.app`
+
+
+
+

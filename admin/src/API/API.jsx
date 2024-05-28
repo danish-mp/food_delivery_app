@@ -12,4 +12,5 @@ export const toastCont = {
   transition: Bounce,
 };
 
-export const backendURL = "http://localhost:8080";
+export const backendURL = "https://food-delivery-app-o0u1.onrender.com";
+// export const backendURL = "http://localhost:8080";

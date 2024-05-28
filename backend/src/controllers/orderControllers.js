@@ -6,7 +6,9 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 //! placing user order for frontend
 const placeOrder = async (req, res) => {
-  const frontend_url = "http://localhost:3030";
+  const frontend_url =
+    "https://zomatofooddelivery-kf54ob2mx-danishs-projects-f407c8aa.vercel.app";
+  // const frontend_url = "http://localhost:3030";
 
   try {
     const newOrder = new orderModel({
