@@ -21,7 +21,8 @@ const StoreContextProvider = (props) => {
     transition: Bounce,
   };
 
-  const url = "https://food-delivery-app-o0u1.onrender.com";
+  const url = "https://food-del-backend-jc3r.onrender.com";
+  // const url = "https://food-delivery-app-o0u1.onrender.com";
   // const url = "http://localhost:8080";
 
   const addToCart = async (itemId) => {
