@@ -68,7 +68,22 @@ MongoDb Atlas =>
 mongodb+srv://food_delivery_app:56943297816495213@cluster0.oflfi81.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 
 
+---------------------------------------------------------------------------------------------------------------------------------------
+
+
+username:- projectDb
+password:- jKSB3C9ndlMCpgvo
+mongodb+srv://projectDb:jKSB3C9ndlMCpgvo@cluster0.bqiwdh6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+
+
+username:- finalProject
+password:- finalProject
+mongodb+srv://finalProject:finalProject@cluster0.bqiwdh6.mongodb.net/food_del_data?retryWrites=true&w=majority&appName=Cluster0
+
+
 ---------------------------------------------------------------------------------------------------------------------------------
+
 
 
 Backend deploy link:-  `https://food-delivery-app-o0u1.onrender.com`
