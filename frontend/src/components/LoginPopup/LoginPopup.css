@@ -77,3 +77,23 @@
   font-weight: 500;
   cursor: pointer;
 }
+
+.spinner {
+  display: flex;
+  justify-content: center;
+}
+
+.spin {
+  width: 21px;
+  height: 21px;
+  border: 3px solid white;
+  border-top-color: tomato;
+  border-radius: 50%;
+  animation: rotate 1s infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}

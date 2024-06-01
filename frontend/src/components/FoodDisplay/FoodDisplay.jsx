@@ -10,22 +10,41 @@ const FoodDisplay = ({ category }) => {
     <div className="food-display" id="food-display">
       <h2>Top dishes near you</h2>
 
-      <div className="food-display-list">
-        {food_list.map((item, index) => {
-          if (category === "All" || category === item.category) {
-            return (
-              <FoodItems
-                key={index}
-                id={item._id}
-                name={item.name}
-                price={item.price}
-                description={item.description}
-                image={item.image}
-              />
-            );
-          }
-        })}
-      </div>
+      {food_list.length > 0 ? (
+        <div className="food-display-list">
+          {food_list.map((item, index) => {
+            if (category === "All" || category === item.category) {
+              return (
+                <FoodItems
+                  key={index}
+                  id={item._id}
+                  name={item.name}
+                  price={item.price}
+                  description={item.description}
+                  image={item.image}
+                />
+              );
+            }
+          })}
+        </div>
+      ) : (
+        <div className="loading-spinner">
+          <div className="loadingio-spinner-chunk-nq4q5u6dq7r">
+            <div className="ldio-x2uulkbinbj">
+              <div>
+                <div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2>Loading...</h2>
+        </div>
+      )}
     </div>
   );
 };

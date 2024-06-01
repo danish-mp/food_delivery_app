@@ -3,6 +3,7 @@ import "./List.css";
 import axios from "axios";
 import { backendURL } from "../../API/API";
 import { toast, Bounce } from "react-toastify";
+import { assets } from "../../assets/assets";
 
 const List = () => {
   const toastCont = useMemo(
@@ -53,38 +54,46 @@ const List = () => {
     <div className="list add flex-col">
       <p>All Foods List</p>
 
-      <div className="list-table">
-        <div className="list-table-format title">
-          <b>Sl.No.</b>
-          <b>Image</b>
-          <b>Name</b>
-          <b>Category</b>
-          <b>Price</b>
-          <b>Action</b>
-        </div>
+      {list.length > 0 ? (
+        <div className="list-table">
+          <div className="list-table-format title">
+            <b>Sl.No.</b>
+            <b>Image</b>
+            <b>Name</b>
+            <b>Category</b>
+            <b>Price</b>
+            <b>Action</b>
+          </div>
 
-        {list.map((item, index) => {
-          return (
-            <div key={index} className="list-table-format">
-              <p>{index + 1}</p>
-              <img
-                src={`${backendURL}/images/${item.image}`}
-                alt="broken_image"
-              />
-              <p>{item.name}</p>
-              <p title="Item Category">{item.category}</p>
-              <p>$ {item.price}</p>
-              <p
-                className="cursor removeBtn"
-                onClick={() => removeFood(item._id)}
-                title="Remove"
-              >
-                X
-              </p>
-            </div>
-          );
-        })}
-      </div>
+          {list.map((item, index) => {
+            return (
+              <div key={index} className="list-table-format">
+                <p>{index + 1}</p>
+                <img
+                  src={`${backendURL}/images/${item.image}`}
+                  alt="broken_image"
+                />
+                <p>{item.name}</p>
+                <p title="Item Category">{item.category}</p>
+                <p>$ {item.price}</p>
+                <p
+                  className="cursor removeBtn"
+                  onClick={() => removeFood(item._id)}
+                  title="Remove"
+                >
+                  X
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      ) : (
+        <div className="spinImage">
+          <img src={assets.spinImage} alt="spinImage" />
+
+          <h2>Please wait...</h2>
+        </div>
+      )}
     </div>
   );
 };

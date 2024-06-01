@@ -7,7 +7,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 //! placing user order for frontend
 const placeOrder = async (req, res) => {
   const frontend_url =
-    "https://food-delivery-l44k6tegf-danishs-projects-f407c8aa.vercel.app";
+    "https://food-delivery-i0nb3imlo-danishs-projects-f407c8aa.vercel.app";
   // const frontend_url = "http://localhost:3030";
 
   try {

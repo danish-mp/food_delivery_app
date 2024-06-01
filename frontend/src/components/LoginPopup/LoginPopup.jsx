@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 const LoginPopup = ({ setShowLogin }) => {
   const { url, token, setToken, toastCont } = useContext(StoreContext);
 
+  const [spin, setSpin] = useState(false);
   const [currentState, setCurrentState] = useState("Login");
   const [data, setData] = useState({
     name: "",
@@ -22,8 +23,18 @@ const LoginPopup = ({ setShowLogin }) => {
     setData((data) => ({ ...data, [name]: value }));
   };
 
+  const guestUserHandler = (event) => {
+    event.preventDefault();
+    setData({
+      ...data,
+      email: "guest@example.com",
+      password: "#1234567",
+    });
+  };
+
   const onLogin = async (event) => {
     event.preventDefault();
+    setSpin(true);
     let newUrl = url;
 
     if (currentState === "Login") {
@@ -37,9 +48,12 @@ const LoginPopup = ({ setShowLogin }) => {
     if (response.data.success) {
       setToken(response.data.token);
       localStorage.setItem("token", response.data.token);
+
+      setSpin(false);
       setShowLogin(false);
     } else {
       toast.error(response.data.message, toastCont);
+      setSpin(false);
     }
   };
 
@@ -86,21 +100,17 @@ const LoginPopup = ({ setShowLogin }) => {
           />
         </div>
 
-        <button type="submit">
-          {currentState === "Login" ? "Login" : "Create account"}
+        <button className="spinner" type="submit">
+          {currentState === "Login"
+            ? (spin && <div className="spin"></div>) || "Login"
+            : (spin && <div className="spin"></div>) || "Create account"}
         </button>
 
         {currentState === "Login" ? (
           <button
             type="submit"
             className="guest-user-btn"
-            onClick={() =>
-              setData({
-                ...data,
-                email: "guest@example.com",
-                password: "#1234567",
-              })
-            }
+            onClick={(event) => guestUserHandler(event)}
           >
             Get guest user credentials
           </button>

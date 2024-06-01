@@ -37,6 +37,23 @@
   font-size: 15px;
 }
 
+.spinImage {
+  display: flex;
+  margin-top: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.spinImage img {
+  width: 130px;
+}
+
+.spinImage h2 {
+  color: rgb(181, 86, 207);
+  font-weight: 500;
+}
+
 @media (max-width: 600px) {
   .list-table-format {
     grid-template-columns: 1fr 3fr 1fr;
@@ -44,5 +61,11 @@
   }
   .list-table-format.title {
     display: none;
+  }
+  .spinImage img {
+    width: 90px;
+  }
+  .spinImage h2 {
+    font-weight: 400;
   }
 }
